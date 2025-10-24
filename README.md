@@ -34,7 +34,7 @@ A modern, responsive web application for the Little Lemon restaurant that allows
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/DurveshChavan/little_lemon.git
    cd little-lemon-booking
    ```
 
@@ -235,3 +235,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 **Little Lemon Restaurant** - A family-owned Mediterranean restaurant focused on traditional recipes served with a modern twist.
 #
+
