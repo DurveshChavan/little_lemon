@@ -41,7 +41,7 @@ const validateField = (name, value) => {
     case 'phone':
       if (!value.trim()) {
         errors.phone = 'Phone number is required';
-      } else if (!/^[\d\s\-\+\(\)]+$/.test(value.trim())) {
+      } else if (!/^[\d\s\-+()]+$/.test(value.trim())) {
         errors.phone = 'Please enter a valid phone number';
       } else if (value.replace(/\D/g, '').length < 10) {
         errors.phone = 'Phone number must be at least 10 digits';
