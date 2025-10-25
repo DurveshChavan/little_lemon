@@ -23,8 +23,8 @@ describe('Footer Component', () => {
   test('renders quick links', () => {
     render(<Footer />);
     
-    const homeLink = screen.getByRole('link', { name: /go to home section/i });
-    const reservationsLink = screen.getByRole('link', { name: /go to reservations section/i });
+    const homeLink = screen.getByRole('link', { name: /home/i });
+    const reservationsLink = screen.getByRole('link', { name: /reservations/i });
 
     expect(homeLink).toBeInTheDocument();
     expect(reservationsLink).toBeInTheDocument();
@@ -46,8 +46,8 @@ describe('Footer Component', () => {
   test('links have proper href attributes', () => {
     render(<Footer />);
     
-    const homeLink = screen.getByRole('link', { name: /go to home section/i });
-    const reservationsLink = screen.getByRole('link', { name: /go to reservations section/i });
+    const homeLink = screen.getByRole('link', { name: /home/i });
+    const reservationsLink = screen.getByRole('link', { name: /reservations/i });
     
     expect(homeLink).toHaveAttribute('href', '#home');
     expect(reservationsLink).toHaveAttribute('href', '#reservations');

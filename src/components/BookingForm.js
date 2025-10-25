@@ -136,7 +136,7 @@ const formReducer = (state, action) => {
   }
 };
 
-const BookingForm = () => {
+const BookingForm = ({ availableTimes, guestOptions }) => {
   const [formState, dispatch] = useReducer(formReducer, initialFormState);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
@@ -192,27 +192,9 @@ const BookingForm = () => {
     }
   };
 
-  // Generate time options
-  const generateTimeOptions = () => {
-    const times = [];
-    for (let hour = 11; hour <= 22; hour++) {
-      for (let minute = 0; minute < 60; minute += 30) {
-        if (hour === 22 && minute > 0) break;
-        const timeString = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
-        times.push(timeString);
-      }
-    }
-    return times;
-  };
-
-  // Generate guest options
-  const generateGuestOptions = () => {
-    const guests = [];
-    for (let i = 1; i <= 10; i++) {
-      guests.push(i);
-    }
-    return guests;
-  };
+  // Use props from parent component for available times and guest options
+  const timeOptions = availableTimes || [];
+  const guestOptionsList = guestOptions || [];
 
   return (
     <section className="booking-section" id="reservations" aria-labelledby="booking-title">
@@ -363,7 +345,7 @@ const BookingForm = () => {
                   required
                 >
                   <option value="">Select a time</option>
-                  {generateTimeOptions().map(time => (
+                  {timeOptions.map(time => (
                     <option key={time} value={time}>
                       {new Date(`2000-01-01T${time}`).toLocaleTimeString('en-US', {
                         hour: 'numeric',
@@ -397,7 +379,7 @@ const BookingForm = () => {
                   required
                 >
                   <option value="">Select number of guests</option>
-                  {generateGuestOptions().map(num => (
+                  {guestOptionsList.map(num => (
                     <option key={num} value={num}>
                       {num} {num === 1 ? 'Guest' : 'Guests'}
                     </option>

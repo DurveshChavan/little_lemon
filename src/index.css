@@ -7,6 +7,18 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* Account for sticky header */
+}
+
+/* Improve mobile experience */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
@@ -143,6 +155,19 @@ h4 {
   
   .container {
     padding: 0 16px;
+  }
+  
+  /* Improve touch targets for mobile */
+  .nav a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn {
+    min-height: 44px;
+    touch-action: manipulation;
   }
 }
 
