@@ -395,13 +395,11 @@ The booking form includes real-time validation for:
   </tr>
 </table>
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 
 **Little Lemon Restaurant** - A family-owned Mediterranean restaurant focused on traditional recipes served with a modern twist.
 
 **Made by Durvesh Chavan**
+
 
