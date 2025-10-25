@@ -27,7 +27,7 @@ Little Lemon is a family-owned Mediterranean restaurant, focused on traditional 
 - [Accessibility](#accessibility)
 - [Responsive Design](#responsive-design)
 - [Project Structure](#project-structure)
-- [Screenshots](#screenshots)
+- [Screenshots](#screenshots) (Please Navigate to Sreenshorts)
 - [Contributing](#contributing)
 - [License](#license)
 
